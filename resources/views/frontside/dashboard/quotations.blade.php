@@ -1,0 +1,99 @@
+@extends('frontside.layouts.app')
+
+@section('style')
+
+<link href="{{ asset('backend\plugins\datatables\dataTables.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('backend\plugins\datatables\buttons.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('backend\plugins\datatables\responsive.bootstrap4.min.css') }}" rel="stylesheet" type="text/css">
+<style>
+#quotation-datatable tbody td{
+    cursor: pointer;
+}
+#quotation-datatable tbody tr:hover{
+    background: #009a7140;
+}
+</style>
+@endsection
+@section('content')
+    <div class="row dark-green div-breadcrumbs" style="background: #009a71; color: white; padding: 10px;">
+        <div class="container">
+            <div>
+                <a style="color:white;font-weight:500;" href="{{ route('user.dashboard') }}">{{ __('Dashboard') }}</a> /
+                {{ __('Quotations') }}
+            </div>
+        </div>
+    </div>
+    <section class="content-section" id="account-page">
+        <div class="container">
+            <div class="mt-2 row bottom-space">
+                <div class="container">
+                    <div class="col-md-2"></div>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <h3>{{ __('Quotations') }}</h3>
+                            <table id="quotation-datatable" class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>{{ __('Quotation #') }} </th>
+                                        <th>{{ __('Quotation Date') }}</th>
+                                        <th>{{ __('Total') }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+@endsection
+@section('script')
+
+<script src="{{ asset('backend\plugins\datatables\jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\buttons.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\jszip.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\pdfmake.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\vfs_fonts.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\buttons.html5.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\buttons.print.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\buttons.colVis.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('backend\plugins\datatables\responsive.bootstrap4.min.js') }}"></script>
+<script>
+    var table = $('#quotation-datatable').DataTable({
+            lengthChange: false,
+            responsive: true,
+            serverSide: true,
+            orderCellsTop:true,
+            scrollCollapse: true,
+            fixedColumns: true,
+            "order": [[ 1, "desc" ]],
+            ajax: '{{ route("user.dashboard.quotations") }}',
+            columns: [
+                {
+                    data: 'ordernumber',
+                    name: 'ordernumber'
+                },
+                {
+                    data: 'created_at',
+                    name: 'created_at'
+                },
+                {
+                    data: 'total',
+                    name: 'total'
+                }
+            ]
+        });
+        $('#quotation-datatable tbody').on('click', 'td', function () {
+            var tr = $(this).closest('tr');
+            var row = table.row( tr );
+            document.location.href = row.data().link;
+        } );
+</script>
+@endsection

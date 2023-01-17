@@ -1,0 +1,2808 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title> TIMmunity GmbH |  Reseller Dashboard </title>
+    <link rel="shortcut icon" href="http://localhost/timunity/public/frontside/dist/img/favicon.png">
+    <link rel="stylesheet" href="http://localhost/timunity/public/frontside/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://localhost/timunity/public/frontside/bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://localhost/timunity/public/backend/dist/css/loader.css">
+    <link rel="stylesheet" href="http://localhost/timunity/public/frontside/dist/css/custom-style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .bg-red, .bg-yellow, .bg-aqua, .bg-blue, .bg-light-blue, .bg-green, .bg-navy, .bg-teal, .bg-olive, .bg-lime, .bg-orange, .bg-fuchsia, .bg-purple, .bg-maroon, .bg-black, .bg-red-active, .bg-yellow-active, .bg-aqua-active, .bg-blue-active, .bg-light-blue-active, .bg-green-active, .bg-navy-active, .bg-teal-active, .bg-olive-active, .bg-lime-active, .bg-orange-active, .bg-fuchsia-active, .bg-purple-active, .bg-maroon-active, .bg-black-active, .callout.callout-danger, .callout.callout-warning, .callout.callout-info, .callout.callout-success, .alert-success, .alert-danger, .alert-error, .alert-warning, .alert-info, .label-danger, .label-info, .label-warning, .label-primary, .label-success, .modal-primary .modal-body, .modal-primary .modal-header, .modal-primary .modal-footer, .modal-warning .modal-body, .modal-warning .modal-header, .modal-warning .modal-footer, .modal-info .modal-body, .modal-info .modal-header, .modal-info .modal-footer, .modal-success .modal-body, .modal-success .modal-header, .modal-success .modal-footer, .modal-danger .modal-body, .modal-danger .modal-header, .modal-danger .modal-footer {
+                    color: #fff !important
+                }
+
+                .bg-gray {
+                    color: #000;
+                    background-color: #d2d6de !important
+                }
+                .bg-gray-light {
+                    background-color: #f7f7f7
+                }
+                .bg-black {
+                    background-color: #111 !important
+                }
+                .bg-red, .callout.callout-danger, .alert-danger, .alert-error, .label-danger, .modal-danger .modal-body {
+                    background-color: #dd4b39 !important
+                }
+                .bg-yellow, .callout.callout-warning, .alert-warning, .label-warning, .modal-warning .modal-body {
+                    background-color: #f39c12 !important
+                }
+                .bg-aqua, .callout.callout-info, .alert-info, .label-info, .modal-info .modal-body {
+                    background-color: #00c0ef !important
+                }
+                .bg-blue {
+                    background-color: #0073b7 !important
+                }
+                .bg-light-blue, .label-primary, .modal-primary .modal-body {
+                    background-color: #3c8dbc !important
+                }
+                .bg-green, .callout.callout-success, .alert-success, .label-success, .modal-success .modal-body {
+                    background-color: #009a71 !important
+                }
+                .bg-navy {
+                    background-color: #001f3f !important
+                }
+                .bg-teal {
+                    background-color: #39cccc !important
+                }
+                .bg-olive {
+                    background-color: #3d9970 !important
+                }
+                .bg-lime {
+                    background-color: #01ff70 !important
+                }
+                .bg-orange {
+                    background-color: #ff851b !important
+                }
+                .bg-fuchsia {
+                    background-color: #f012be !important
+                }
+                .bg-purple {
+                    background-color: #605ca8 !important
+                }
+                .bg-maroon {
+                    background-color: #d81b60 !important
+                }
+                .bg-gray-active {
+                    color: #000;
+                    background-color: #b5bbc8 !important
+                }
+                .bg-black-active {
+                    background-color: #000 !important
+                }
+                .bg-red-active, .modal-danger .modal-header, .modal-danger .modal-footer {
+                    background-color: #d33724 !important
+                }
+                .bg-yellow-active, .modal-warning .modal-header, .modal-warning .modal-footer {
+                    background-color: #db8b0b !important
+                }
+                .bg-aqua-active, .modal-info .modal-header, .modal-info .modal-footer {
+                    background-color: #00a7d0 !important
+                }
+                .bg-blue-active {
+                    background-color: #005384 !important
+                }
+                .bg-light-blue-active, .modal-primary .modal-header, .modal-primary .modal-footer {
+                    background-color: #357ca5 !important
+                }
+                .bg-green-active, .modal-success .modal-header, .modal-success .modal-footer {
+                    background-color: #009A71 !important
+                }
+                .bg-navy-active {
+                    background-color: #001a35 !important
+                }
+                .bg-teal-active {
+                    background-color: #30bbbb !important
+                }
+                .bg-olive-active {
+                    background-color: #368763 !important
+                }
+                .bg-lime-active {
+                    background-color: #00e765 !important
+                }
+                .bg-orange-active {
+                    background-color: #ff7701 !important
+                }
+                .bg-fuchsia-active {
+                    background-color: #db0ead !important
+                }
+                .bg-purple-active {
+                    background-color: #555299 !important
+                }
+                .bg-maroon-active {
+                    background-color: #ca195a !important
+                }
+            .login-box-body, .register-box-body {
+                background: #efe;
+                padding: 20px;
+                border-top: 0;
+                color: #666;
+            }
+            .login-logo, .register-logo {
+                font-size: 35px;
+                text-align: center;
+                margin-bottom: 25px;
+                font-weight: 300;
+            }
+            .login-box-msg, .register-box-msg {
+                margin: 0;
+                text-align: center;
+                padding: 0 20px 20px 20px;
+            }
+            .pagination>li>a, .pagination>li>span {
+                color: #009a71;
+            }
+            .pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+                background-color: #009a71;
+                border-color: #009a71;
+
+            }
+            .copyright{
+                background: #fff;
+                padding: 12px 15px 12px 15px;
+                margin-top: 80px;
+            }
+            .copyright p{
+                font-size: 14px;
+                color: #000;
+                margin: 0;
+                font-weight: 400;
+            }
+            .footer .right-img{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+            .footer-logo-text{
+                font-size: 14px;
+                color: #fff;
+                margin: 0;
+                font-weight: 400;
+            }
+            @media(max-width:991px){
+            .footer .right-img {
+                    background: #fff;
+                    text-align: center;
+                    position: relative;
+                }
+                .footer .right-img a{
+                    display: inline-block;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                }
+                .copyright p{
+                    text-align: center;
+                }
+            }
+            @media (max-width: 480px){
+            .copyright {
+                    padding: 12px 0px 5px 0px;
+                }
+                .copyright p {
+                    font-size: 12px;
+                    text-align: center;
+                }
+            }
+    </style>
+        <link href="http://localhost/timunity/public/backend\plugins\datatables\dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost/timunity/public/backend\plugins\datatables\buttons.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <link href="http://localhost/timunity/public/backend\plugins\datatables\responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+    <style>
+        .green-box {
+            border: 1px solid #787759;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .row.cloud-row {
+            margin-top: 20px;
+        }
+
+        #vouchers thead tr {
+            background: #009a71;
+        }
+
+        #vouchers thead tr th {
+            color: white;
+        }
+
+        .get-more-voucher-btn {
+            font-size: 2rem;
+        }
+
+        table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+        table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+            background-color: #009a71;
+        }
+        label.error{
+            color:red;
+        }
+        .form-control.error{
+            border:1px solid red;
+            box-shadow: inset 0 1px 1px rgb(241 134 134 / 65%);
+        }
+        #vouchers_wrapper thead tr {
+            background: #009a71;
+        }
+        #vouchers_wrapper thead tr th {
+            color: #fff;
+        }
+        .green-box h1{
+            color: #009a71;
+        }
+        .green-box{
+            border-color: #009a71;
+        }
+        .green-box:hover{
+            background: #009a71;
+        }
+        .green-box:hover h1, .green-box:hover h4{
+            color:white;
+        }
+
+    </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-204840638-1"></script>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-204840638-1');
+    </script>
+
+</head>
+<body class=" cart-page  en english_body" >
+
+    <div class="loader-parent" id="ajax_loader">
+        <div class="loader">
+          <div class="square"></div>
+             <div class="path">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+             </div>
+         </div>
+     </div>
+    <!-- Header Section -->
+          <style>
+    ul.dropdown-menu.user-dropdown {
+        border-top-right-radius: 0;
+        border-top-left-radius: 0;
+        padding: 1px 0 0 0;
+        border-top-width: 0;
+        width: 250px;
+        position: absolute;
+        right: 0;
+        left: auto;
+    }
+    ul.dropdown-menu.user-dropdown li.user-header {
+        background: #009a71;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+    ul.dropdown-menu.user-dropdown li.user-header img {
+        border-radius: 50%;
+        max-width: 100px;
+    }
+    ul.dropdown-menu.user-dropdown li.user-body {
+        padding: 10px 0px;
+    }
+    ul.dropdown-menu.user-dropdown li.user-body a {
+        padding: 10px 5px;
+    }
+    ul.dropdown-menu.user-dropdown li.user-body a:hover {
+        background: #009a71;
+        color: white;
+        text-decoration: none;
+    }
+    .user-account-btn{
+        margin-left: 10px;
+        border: 1px solid #009a71;
+        border-radius: 25px;
+        padding: 10px 30px;
+        color: #009a71 !important;
+        transition: 0.3s;
+    }
+    .user-account-btn:hover{
+        color: white !important;
+        background-color: #009a71 !important;
+    }
+    img#nav-image {
+        width: 20px;
+        margin-right: 10px;
+        border-radius: 20px;
+    }
+    ul.dropdown-menu.currency-switch-dropdown {
+        max-height: 240px;
+        overflow: auto;
+    }
+    .currency-switch-dropdown {
+        max-height: 350px;
+        overflow-y: auto;
+        left: -137px !important;
+        width: 232px !important;
+        padding: 0 !important;
+        background: #f0f8ff;
+    }
+</style>
+<header class="main-header"
+    style="border-top: 1px solid #009a71;border-bottom: 1px solid #efefef;box-shadow: 0px 0px 2px 2px #efefef;">
+    <nav class="navbar navbar-static-top">
+        <div class="container">
+            <div class="mbl-header-wrapper">
+            <div class="navbar-header">
+                <a href="http://localhost/timunity/public" class="navbar-brand logo"><img
+                        src="http://localhost/timunity/public/storage/uploads/site_logo.png" ></a>
+                        
+                <button type="button" class="mobile-nav navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#navbar-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse pull-right" id="navbar-collapse">
+                <ul class="nav navbar-nav custom-margin header-nav">
+                    <li><a  href="http://localhost/timunity/public">Home</a></li>
+                    <li><a  href="http://localhost/timunity/public/shop">Shop</a></li>
+                    <li><a  href="http://localhost/timunity/public/about">About Us</a></li>
+                    <li><a  href="http://localhost/timunity/public/contact">Contact Us</a></li>
+                    <li>
+                        <a href="http://localhost/timunity/public/cart">
+                            <span class="price" style="color:black">
+                                <i class="fa fa-shopping-cart"></i>
+                                <b>1</b>
+                            </span>
+                        </a>
+                    </li>
+                                                                    <li class="dropdown language-bar">
+                            <div class="dropdown">
+                                <button type="button" class="btn btn-primary dropdown-toggle"data-toggle="dropdown">
+                                <img src="http://localhost/timunity/public/frontside/dist/flag/en.svg"
+                                height="30px" width="30px"style="border-radius:50%;"> en <span class="caret">
+                                </button>
+                                <div class="dropdown-menu">
+                                                                <a class="dropdown-item   class= active " href="http://localhost/timunity/public/lang/en">
+                                <span class="lang-name">English</span>
+                                <img src="http://localhost/timunity/public/frontside/dist/flag/en.svg"height="30px">
+                                </a>
+                                                                <a class="dropdown-item  " href="http://localhost/timunity/public/lang/de">
+                                <span class="lang-name">German</span>
+                                <img src="http://localhost/timunity/public/frontside/dist/flag/de.svg"height="30px">
+                                </a>
+                                                                <a class="dropdown-item  " href="http://localhost/timunity/public/lang/zh">
+                                <span class="lang-name">Chinese (simplified)</span>
+                                <img src="http://localhost/timunity/public/frontside/dist/flag/zh.svg"height="30px">
+                                </a>
+                                                                </div>
+                            </div>
+                        </li>
+                        
+                                                <li class="">
+                            <a class="btn btn-default user-account-btn dropdown-toggle" data-toggle="dropdown" href="#.">
+                                <span><img id="nav-image" src="http://localhost/timunity/public/storage/uploads/contact/z8AxaJV/contact-1635835096.PNG"
+                                    ></span>Faizanc
+                            </a>
+                            <ul class="dropdown-menu user-dropdown">
+                                <!-- The user image in the menu -->
+                                <li class="user-header">
+                                    <img id="imagePreview" src="http://localhost/timunity/public/storage/uploads/contact/z8AxaJV/contact-1635835096.PNG"
+                                       >
+                                    <p>
+                                        Faizanc <br>
+                                        <small>
+                                            Member since<strong> 4 weeks ago</strong>
+                                        </small>
+                                    </p>
+                                                                        <a class="btn btn-default" href="http://localhost/timunity/public/reseller/dashboard">Reseller Dashboard</a><br />
+                                                                                                            <span class="badge unverified-badge">Unverified</span>
+                                                                    </li>
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="http://localhost/timunity/public/account">Account</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="http://localhost/timunity/public/account/user-profile">Profile</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="http://localhost/timunity/public/logout">Logout</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                            </ul>
+                        </li>
+                        
+                                                                <li class="currency-switch">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#.">€ - EUR</a>
+                        <ul class="dropdown-menu currency-switch-dropdown ">
+                                                                                        <li>
+                                    <a href="http://localhost/timunity/public/switch-currency/ALL">Lek - ALL</a>
+                                </li>
+                                                                                                                    <li>
+                                    <a href="http://localhost/timunity/public/switch-currency/USD">$ - USD</a>
+                                </li>
+                                                                                                                    <li>
+                                    <a href="http://localhost/timunity/public/switch-currency/AFN">؋ - AFN</a>
+                                </li>
+                                                                                                                    <li>
+                                    <a href="http://localhost/timunity/public/switch-currency/BSD">$ - BSD</a>
+                                </li>
+                                                                                                                    <li>
+                                    <a href="http://localhost/timunity/public/switch-currency/EUR">€ - EUR</a>
+                                </li>
+                                                                                                                    <li>
+                                    <a href="http://localhost/timunity/public/switch-currency/PHP">Php - PHP</a>
+                                </li>
+                                                                                </ul>
+                    </li>
+
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+    </header>
+        <div class="alert alert-warning alert-block text-center">
+    <button type="button" class="close" data-dismiss="alert">×</button>
+    <strong>Your account is unverified! Kindly verify your account.</strong>
+</div>
+
+
+    <!-- Content Area -->
+    <div id="main-content-wrapper-div">
+            <div class="container">
+        <div class="row cloud-row">
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="green-box">
+                    <h4><strong>Total Orders</strong></h4>
+                    <h1><strong>2</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="green-box">
+                    <h4><strong>Total Vouchers</strong></h4>
+                    <h1><strong>110</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="green-box">
+                    <h4><strong>Used Vouchers</strong></h4>
+                    <h1><strong>3</strong></h1>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                <div class="green-box">
+                    <h4><strong>Remaining Vouchers</strong></h4>
+                    <h1><strong>107</strong></h1>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="voucher_heading">Voucher Orders</h3>
+            </div>
+            <div class="col-md-12">
+                <div class="table-responsive">
+                    <table width="100%" id="vouchers"
+                        class="table table-striped table-bordered dt-responsive nowrap no-footer dataTable">
+                        <thead>
+                            <tr role="row">
+                                <th>#</th>
+                                <th>Actions</th>
+                                <th>Status</th>
+                                <th>Active </th>
+                                <th>Product</th>
+                                <th>Date</th>
+                                <th>Quantity</th>
+                                <th>Used</th>
+                                <th>Remaining</th>
+                                <th>Unit Price</th>
+                                <th>Discount (%)</th>
+                                <th>Taxes</th>
+                                <th>Total Payable Amount</th>
+                                <th>Pending Payment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-md-12 mb-2">
+                <div class="text-center mt-3">
+                    <a class="btn btn-large btn-primary get-more-voucher-btn" data-toggle="modal"
+                        data-target="#getVoucherModal"><span>Get more vouchers</span>
+                    </a>
+                    <a class="btn btn-large btn-warning get-more-voucher-btn" href="http://localhost/timunity/public/faizan-redeem-page/z8AxaJV"> Visit Redeem Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="getVoucherModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="voucher_form" action="http://localhost/timunity/public/reseller/orderVoucher" method="POST">
+                <input type="hidden" name="_token" value="gept0Sls3UupxyxNp53KZ4T4A1u6Gs5VKvH82hA5">                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                                class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Order Voucher</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="form-group">
+                                    <label for="product_id" class="control-label">Product<span style="color:red">*</span></label>
+                                    <select required name="product_id" id="" class="form-control">
+                                        <option value="">Select Product</option>
+                                                                                    <option value="yBA1O6a" data-secondary-projects='[]' data-variation-count="13">AVAST</option>
+                                                                                    <option value="z8AxaJV" data-secondary-projects='[]' data-variation-count="13">Acronics</option>
+                                                                                    <option value="9P6MxJd" data-secondary-projects='["Move Immunity","NED.link","aikQ","QR Code"]' data-variation-count="6">Transfer Immunity Bundle</option>
+                                                                                    <option value="yKAVrAg" data-secondary-projects='["Transfer Immunity","NED.link","Inbox","QR Code"]' data-variation-count="12">Move Immunity Bundle</option>
+                                                                                    <option value="gR67L3b" data-secondary-projects='["Transfer Immunity","Move Immunity","Over Mail","QR Code"]' data-variation-count="12">NED link Bundle</option>
+                                                                                    <option value="1o35rAw" data-secondary-projects='[]' data-variation-count="12">Test123</option>
+                                                                                    <option value="1p3Xl3Q" data-secondary-projects='["Transfer Immunity","Move Immunity","NED.link","Maili","QR Code"]' data-variation-count="0">Bethany Daniels</option>
+                                                                            </select>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 secondary_projects_div" style="display:none;">
+                                <div class="form-group">
+                                    <label for="variation_id" class="control-label">Secondary Products</label>
+                                    <div class="data">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 variation_selection" style="display:none;">
+                                <div class="form-group">
+                                    <label for="variation_id" class="control-label">Variation<span style="color:red">*</span></label>
+                                    <select  name="variation_id" id="" class="form-control">
+                                        <option value="">Select Variation</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="reseller_name" class="control-label">Name<span style="color:red">*</span></label>
+                                <input required type="text" readonly class="form-control" name="reseller_name" value="Faizanc">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="reseller_email" class="control-label">Email<span style="color:red">*</span></label>
+                                <input required type="email" readonly class="form-control" name="reseller_email" value="faizan.zahid@reseller.com">
+                            </div>
+                            <div class="col-xs-12">
+                                <label for="address" class="control-label">Street Address<span style="color:red">*</span></label>
+                                <input required type="text"  class="form-control" name="address" >
+                            </div>
+                            <div class="col-md-6">
+                                <label for="city" class="control-label">City<span style="color:red">*</span></label>
+                                <input required type="text"  class="form-control" name="city" >
+                            </div>
+                            <div class="col-md-6">
+                                <label for="zip_code" class="control-label">Zip Code<span style="color:red">*</span></label>
+                                <input required type="text"  class="form-control" name="zip_code" >
+                            </div>
+                            <input type="hidden" name="vat_percentage" value="0">
+                            <div class="col-md-12">
+                                <label for="country_id" class="control-label">Country<span style="color:red">*</span></label>
+                                <select required name="country_id" id="" class="form-control">
+                                    <option value="">Select Country</option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yBA1O6a"
+                                                                                        >
+                                            Afghanistan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="z8AxaJV"
+                                                                                        >
+                                            Albania
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="9P6MxJd"
+                                                                                        >
+                                            Algeria
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yKAVrAg"
+                                                                                        >
+                                            American Samoa
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="gR67L3b"
+                                                                                        >
+                                            Andorra
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="LaADZ6P"
+                                                                                        >
+                                            Angola
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8QJ0DJa"
+                                                                                        >
+                                            Anguilla
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="1o35rAw"
+                                                                                        >
+                                            Antarctica
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="1p3Xl3Q"
+                                                                                        >
+                                            Antigua And Barbuda
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qm6NK3v"
+                                                                                        >
+                                            Argentina
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yg3rdJP"
+                                                                                        >
+                                            Armenia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="r03eRAx"
+                                                                                        >
+                                            Aruba
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="bxAQ760"
+                                                                                        >
+                                            Australia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="k23waJL"
+                                                                                        >
+                                            Austria
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="wG6mxJN"
+                                                                                        >
+                                            Azerbaijan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="843ye3R"
+                                                                                        >
+                                            Bahamas
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="MBJbQA0"
+                                                                                        >
+                                            Bahrain
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="ya3WN64"
+                                                                                        >
+                                            Bangladesh
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yjJLV3v"
+                                                                                        >
+                                            Barbados
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="5l3ENA1"
+                                                                                        >
+                                            Belarus
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="dqJjeA2"
+                                                                                        >
+                                            Belgium
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="am6nmJY"
+                                                                                        >
+                                            Belize
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="EPAGy62"
+                                                                                        >
+                                            Benin
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="Lw6453b"
+                                                                                        >
+                                            Bermuda
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="z8JBd3D"
+                                                                                        >
+                                            Bhutan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="zbJ9R6Q"
+                                                                                        >
+                                            Bolivia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="pO3voAZ"
+                                                                                        >
+                                            Bosnia and Herzegovina
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="VO6d2Ag"
+                                                                                        >
+                                            Botswana
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="gxJZ83d"
+                                                                                        >
+                                            Bouvet Island
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="jyAPW3k"
+                                                                                        >
+                                            Brazil
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="wrJlDJ8"
+                                                                                        >
+                                            British Indian Ocean Territory
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="EXARx6D"
+                                                                                        >
+                                            Brunei
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="kL6K9Aq"
+                                                                                        >
+                                            Bulgaria
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="VoA8YJZ"
+                                                                                        >
+                                            Burkina Faso
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="p7Agm6l"
+                                                                                        >
+                                            Burundi
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qeJkVAD"
+                                                                                        >
+                                            Cambodia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="k2Aq43O"
+                                                                                        >
+                                            Cameroon
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="eN3oPAj"
+                                                                                        >
+                                            Canada
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="oa6aR35"
+                                                                                        >
+                                            Cape Verde
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="rqA2p6X"
+                                                                                        >
+                                            Cayman Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8V6O76Y"
+                                                                                        >
+                                            Central African Republic
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="kV6z1JW"
+                                                                                        >
+                                            Chad
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="Xr6YDJm"
+                                                                                        >
+                                            Chile
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="e6pq83y"
+                                                                                        >
+                                            China
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BA1OO6a"
+                                                                                        >
+                                            Christmas Island
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8Axwa3V"
+                                                                                        >
+                                            Cocos (Keeling) Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="P6MLxJd"
+                                                                                        >
+                                            Colombia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="KAVGrJg"
+                                                                                        >
+                                            Comoros
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="R67kL6b"
+                                                                                        >
+                                            Congo
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="aADKZ3P"
+                                                                                        >
+                                            Congo The Democratic Republic Of
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="QJ0ED6a"
+                                                                                        >
+                                            Cook Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="o35orJw"
+                                                                                        >
+                                            Costa Rica
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="p3XalAQ"
+                                                                                        >
+                                            Cote D&#039;Ivoire (Ivory Coast)
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6NEKJv"
+                                                                                        >
+                                            Croatia (Hrvatska)
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="g3rDdJP"
+                                                                                        >
+                                            Cuba
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="03eBRAx"
+                                                                                        >
+                                            Cyprus
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xAQD730"
+                                                                                        >
+                                            Czech Republic
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="23wra6L"
+                                                                                        >
+                                            Denmark
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="G6mQx6N"
+                                                                                        >
+                                            Djibouti
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="43yneAR"
+                                                                                        >
+                                            Dominica
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BJbRQJ0"
+                                                                                        >
+                                            Dominican Republic
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a3WRN64"
+                                                                                        >
+                                            East Timor
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="jJL2V3v"
+                                                                                        >
+                                            Ecuador
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="l3EnNA1"
+                                                                                        >
+                                            Egypt
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qJjaeA2"
+                                                                                        >
+                                            El Salvador
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6nwm3Y"
+                                                                                        >
+                                            Equatorial Guinea
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="PAGlyJ2"
+                                                                                        >
+                                            Eritrea
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="w64G5Jb"
+                                                                                        >
+                                            Estonia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8JBDd3D"
+                                                                                        >
+                                            Ethiopia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="bJ9MRJQ"
+                                                                                        >
+                                            External Territories of Australia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O3vNo3Z"
+                                                                                        >
+                                            Falkland Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O6dk2Jg"
+                                                                                        >
+                                            Faroe Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xJZo86d"
+                                                                                        >
+                                            Fiji Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yAP9WJk"
+                                                                                        >
+                                            Finland
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="rJlRD38"
+                                                                                        >
+                                            France
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="XAR2xAD"
+                                                                                        >
+                                            French Guiana
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="L6KL93q"
+                                                                                        >
+                                            French Polynesia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="oA8oY3Z"
+                                                                                        >
+                                            French Southern Territories
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="7Agqm6l"
+                                                                                        >
+                                            Gabon
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="eJkgVJD"
+                                                                                        >
+                                            Gambia The
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="2Aqy4AO"
+                                                                                        >
+                                            Georgia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="N3oaPJj"
+                                                                                        >
+                                            Germany
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a6a8RJ5"
+                                                                                        >
+                                            Ghana
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qA2ZpAX"
+                                                                                        >
+                                            Gibraltar
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6Oa7AY"
+                                                                                        >
+                                            Greece
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6zy1JW"
+                                                                                        >
+                                            Greenland
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="r6YRD3m"
+                                                                                        >
+                                            Grenada
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="e6pg8Jy"
+                                                                                        >
+                                            Guadeloupe
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BA1oO6a"
+                                                                                        >
+                                            Guam
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8AxaaJV"
+                                                                                        >
+                                            Guatemala
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="P6MlxJd"
+                                                                                        >
+                                            Guernsey and Alderney
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="KAVar3g"
+                                                                                        >
+                                            Guinea
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="R679LAb"
+                                                                                        >
+                                            Guinea-Bissau
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="aADjZ6P"
+                                                                                        >
+                                            Guyana
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="QJ0ZD3a"
+                                                                                        >
+                                            Haiti
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="o35mr3w"
+                                                                                        >
+                                            Heard and McDonald Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="p3X7l6Q"
+                                                                                        >
+                                            Honduras
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6NMKJv"
+                                                                                        >
+                                            Hong Kong S.A.R.
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="g3rMd6P"
+                                                                                        >
+                                            Hungary
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="e6pgDJy"
+                                                                                        >
+                                            Iceland
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BA1oZ6a"
+                                                                                        >
+                                            India
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8AxamJV"
+                                                                                        >
+                                            Indonesia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="P6MlyJd"
+                                                                                        >
+                                            Iran
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="KAVaB3g"
+                                                                                        >
+                                            Iraq
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="R679OAb"
+                                                                                        >
+                                            Ireland
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="aADj96P"
+                                                                                        >
+                                            Israel
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="QJ0Zd3a"
+                                                                                        >
+                                            Italy
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="o35ma3w"
+                                                                                        >
+                                            Jamaica
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="p3X7v6Q"
+                                                                                        >
+                                            Japan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6NM7Jv"
+                                                                                        >
+                                            Jersey
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="g3rMY6P"
+                                                                                        >
+                                            Jordan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="03eWlJx"
+                                                                                        >
+                                            Kazakhstan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xAQYgA0"
+                                                                                        >
+                                            Kenya
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="23w7L3L"
+                                                                                        >
+                                            Kiribati
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="G6m9R6N"
+                                                                                        >
+                                            Korea North
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="43yNMAR"
+                                                                                        >
+                                            Korea South
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BJbw760"
+                                                                                        >
+                                            Kuwait
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a3W9BJ4"
+                                                                                        >
+                                            Kyrgyzstan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="jJL07Jv"
+                                                                                        >
+                                            Laos
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="l3Emj31"
+                                                                                        >
+                                            Latvia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qJjO462"
+                                                                                        >
+                                            Lebanon
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6nKe3Y"
+                                                                                        >
+                                            Lesotho
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="PAGYW62"
+                                                                                        >
+                                            Liberia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="w64NjAb"
+                                                                                        >
+                                            Libya
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8JB2wJD"
+                                                                                        >
+                                            Liechtenstein
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="bJ9Ow3Q"
+                                                                                        >
+                                            Lithuania
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O3vzw3Z"
+                                                                                        >
+                                            Luxembourg
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O6doNJg"
+                                                                                        >
+                                            Macau S.A.R.
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xJZayAd"
+                                                                                        >
+                                            Macedonia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yAPR16k"
+                                                                                        >
+                                            Madagascar
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="rJla168"
+                                                                                        >
+                                            Malawi
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="XAR0a6D"
+                                                                                        >
+                                            Malaysia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="L6KpL3q"
+                                                                                        >
+                                            Maldives
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="oA8x8AZ"
+                                                                                        >
+                                            Mali
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="7AgddJl"
+                                                                                        >
+                                            Malta
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="eJkjoAD"
+                                                                                        >
+                                            Man (Isle of)
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="2Aqx53O"
+                                                                                        >
+                                            Marshall Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="N3opgAj"
+                                                                                        >
+                                            Martinique
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a6aBl35"
+                                                                                        >
+                                            Mauritania
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qA2OGJX"
+                                                                                        >
+                                            Mauritius
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6OgN6Y"
+                                                                                        >
+                                            Mayotte
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6zvg6W"
+                                                                                        >
+                                            Mexico
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="r6YZg3m"
+                                                                                        >
+                                            Micronesia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="e6p1D3y"
+                                                                                        >
+                                            Moldova
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BA1rZJa"
+                                                                                        >
+                                            Monaco
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8AxZm6V"
+                                                                                        >
+                                            Mongolia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="P6MxyJd"
+                                                                                        >
+                                            Montserrat
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="KAV2BAg"
+                                                                                        >
+                                            Morocco
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="R671OAb"
+                                                                                        >
+                                            Mozambique
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="aADe9JP"
+                                                                                        >
+                                            Myanmar
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="QJ02d3a"
+                                                                                        >
+                                            Namibia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="o35OaJw"
+                                                                                        >
+                                            Nauru
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="p3XBvJQ"
+                                                                                        >
+                                            Nepal
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6NY7Jv"
+                                                                                        >
+                                            Netherlands Antilles
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="g3rpYJP"
+                                                                                        >
+                                            Netherlands The
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="03edl6x"
+                                                                                        >
+                                            New Caledonia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xAQ9gA0"
+                                                                                        >
+                                            New Zealand
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="23wQLJL"
+                                                                                        >
+                                            Nicaragua
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="G6maR6N"
+                                                                                        >
+                                            Niger
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="43yYM3R"
+                                                                                        >
+                                            Nigeria
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BJbB7J0"
+                                                                                        >
+                                            Niue
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a3WdBA4"
+                                                                                        >
+                                            Norfolk Island
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="jJL176v"
+                                                                                        >
+                                            Northern Mariana Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="l3E2jA1"
+                                                                                        >
+                                            Norway
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qJjo462"
+                                                                                        >
+                                            Oman
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6nBe6Y"
+                                             selected="seelcted"                                             >
+                                            Pakistan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="PAGmW62"
+                                                                                        >
+                                            Palau
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="w64wjJb"
+                                                                                        >
+                                            Palestinian Territory Occupied
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8JBNwJD"
+                                                                                        >
+                                            Panama
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="bJ9ow3Q"
+                                                                                        >
+                                            Papua new Guinea
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O3vVw3Z"
+                                                                                        >
+                                            Paraguay
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O6dBNAg"
+                                                                                        >
+                                            Peru
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xJZPy3d"
+                                                                                        >
+                                            Philippines
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yAP713k"
+                                                                                        >
+                                            Pitcairn Island
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="rJlr138"
+                                                                                        >
+                                            Poland
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="XAR9a3D"
+                                                                                        >
+                                            Portugal
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="L6KDL3q"
+                                                                                        >
+                                            Puerto Rico
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="oA8w83Z"
+                                                                                        >
+                                            Qatar
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="7AgRd3l"
+                                                                                        >
+                                            Reunion
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="eJkooJD"
+                                                                                        >
+                                            Romania
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="2Aq756O"
+                                                                                        >
+                                            Russia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="N3ovg6j"
+                                                                                        >
+                                            Rwanda
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a6aQl65"
+                                                                                        >
+                                            Saint Helena
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qA2oGJX"
+                                                                                        >
+                                            Saint Kitts And Nevis
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6OLN3Y"
+                                                                                        >
+                                            Saint Lucia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6z5gJW"
+                                                                                        >
+                                            Saint Pierre and Miquelon
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="r6YogAm"
+                                                                                        >
+                                            Saint Vincent And The Grenadines
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="e6pyD3y"
+                                                                                        >
+                                            Samoa
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BA10Z3a"
+                                                                                        >
+                                            San Marino
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8Ax8mAV"
+                                                                                        >
+                                            Sao Tome and Principe
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="P6MwyAd"
+                                                                                        >
+                                            Saudi Arabia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="KAVrBAg"
+                                                                                        >
+                                            Senegal
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="R67QOAb"
+                                                                                        >
+                                            Serbia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="aAD59JP"
+                                                                                        >
+                                            Seychelles
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="QJ0GdAa"
+                                                                                        >
+                                            Sierra Leone
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="o359a3w"
+                                                                                        >
+                                            Singapore
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="p3Xdv3Q"
+                                                                                        >
+                                            Slovakia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6Nl7Av"
+                                                                                        >
+                                            Slovenia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="g3r8YJP"
+                                                                                        >
+                                            Smaller Territories of the UK
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="e6pyz3y"
+                                                                                        >
+                                            Solomon Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BA10z3a"
+                                                                                        >
+                                            Somalia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8Ax8EAV"
+                                                                                        >
+                                            South Africa
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="P6MwrAd"
+                                                                                        >
+                                            South Georgia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="KAVrPAg"
+                                                                                        >
+                                            South Sudan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="R67QEAb"
+                                                                                        >
+                                            Spain
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="aAD5DJP"
+                                                                                        >
+                                            Sri Lanka
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="QJ0G5Aa"
+                                                                                        >
+                                            Sudan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="o35973w"
+                                                                                        >
+                                            Suriname
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="p3XdD3Q"
+                                                                                        >
+                                            Svalbard And Jan Mayen Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6NlwAv"
+                                                                                        >
+                                            Swaziland
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="g3r89JP"
+                                                                                        >
+                                            Sweden
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="03eG8Jx"
+                                                                                        >
+                                            Switzerland
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xAQjZJ0"
+                                                                                        >
+                                            Syria
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="23wnp6L"
+                                                                                        >
+                                            Taiwan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="G6mK7AN"
+                                                                                        >
+                                            Tajikistan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="43yklJR"
+                                                                                        >
+                                            Tanzania
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BJbdY30"
+                                                                                        >
+                                            Thailand
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a3WZ564"
+                                                                                        >
+                                            Togo
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="jJLlGJv"
+                                                                                        >
+                                            Tokelau
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="l3EoYJ1"
+                                                                                        >
+                                            Tonga
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qJjXa32"
+                                                                                        >
+                                            Trinidad And Tobago
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="m6nxKAY"
+                                                                                        >
+                                            Tunisia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="PAGbm32"
+                                                                                        >
+                                            Turkey
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="w64ay3b"
+                                                                                        >
+                                            Turkmenistan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8JBll3D"
+                                                                                        >
+                                            Turks And Caicos Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="bJ9LjAQ"
+                                                                                        >
+                                            Tuvalu
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O3v0GJZ"
+                                                                                        >
+                                            Uganda
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="O6dwMJg"
+                                                                                        >
+                                            Ukraine
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="xJZ0j3d"
+                                                                                        >
+                                            United Arab Emirates
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="yAPGk3k"
+                                                                                        >
+                                            United Kingdom
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="rJlpgJ8"
+                                                                                        >
+                                            United States
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="XARGKJD"
+                                                                                        >
+                                            United States Minor Outlying Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="L6KWe6q"
+                                                                                        >
+                                            Uruguay
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="oA8kE3Z"
+                                                                                        >
+                                            Uzbekistan
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="7AgLzJl"
+                                                                                        >
+                                            Vanuatu
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="eJk8R6D"
+                                                                                        >
+                                            Vatican City State (Holy See)
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="2Aq5KAO"
+                                                                                        >
+                                            Venezuela
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="N3oMOJj"
+                                                                                        >
+                                            Vietnam
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="a6awDA5"
+                                                                                        >
+                                            Virgin Islands (British)
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="qA29v3X"
+                                                                                        >
+                                            Virgin Islands (US)
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6OGn6Y"
+                                                                                        >
+                                            Wallis And Futuna Islands
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="V6zB76W"
+                                                                                        >
+                                            Western Sahara
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="r6YYr6m"
+                                                                                        >
+                                            Yemen
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="e6pVzAy"
+                                                                                        >
+                                            Yugoslavia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="BA19zAa"
+                                                                                        >
+                                            Zambia
+                                        </option>
+                                                                            <option
+                                            data-vat_vercentage="0"
+                                            data-is_default_vat="0"
+                                            data-default_vat="19"
+                                            value="8AxDEAV"
+                                                                                        >
+                                            Zimbabwe
+                                        </option>
+                                                                    </select>
+                                <small><span class="vat_percentage">0</span>% VAT will be applied</small>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="quantity" class="control-label">Quantity </label>
+                                <input required type="number" min="1" class="form-control" name="quantity" />
+                            </div>
+                            <div class="col-md-12">
+                                <label for="message" class="control-label">Message <small>(If any)</small></label>
+                                <textarea class="form-control" name="message" ></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    </div>
+    <!-- Footer Section -->
+          <footer style="margin: auto; text-align: center; float: none;">
+    <div class="green-line container"></div>
+    <div class="row bg-gray content-footer">
+        <div class="footer-logo"><img src="http://localhost/timunity/public/frontside/dist/img/logo.png"></div>
+        <div class="footer-sub-heading"><span>Erftstr. 15 Braunschweig 38120 Germany</span></div>
+
+            <div class="social-icons footer-icons">
+                    <a class="facebook icon-cirle" href="https://www.facebook.com/facebook"><img src="http://localhost/timunity/public/frontside/dist/img/facebook-icon.png"></a>
+                    <a class="twiter icon-cirle" href="https://twitter.com"><img src="http://localhost/timunity/public/frontside/dist/img/twitter.png"></a>
+                    <a class="linkdin icon-cirle" href="https://linkedin.com/"><img src="http://localhost/timunity/public/frontside/dist/img/linkdin.png"></a>
+                    <a class="pinterest icon-cirle" href="https://www.pinterest.com/"><img src="http://localhost/timunity/public/frontside/dist/img/pinterest.png"></a>
+                </div>
+            </div>
+    </div>
+
+    <div class="copy-right row">
+        <div class="col-md-6 text-left">
+            <span class="footer-logo-text">Copyright © TIMmunity GmbH -</span>
+        </div>
+        <div class="col-md-6 text-right">
+            <span class="footer-logo-text">Powered by Arhamsoft</span>
+            <a href="https://www.arhamsoft.com/" target="_blank">
+                <img src="http://localhost/timunity/public/frontside/dist/img/ar-logo.svg" class="img-fluid" alt="" />
+            </a>
+        </div>
+    </div>
+</footer>
+    
+    <!-- javacrcipt files -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- JQuery Validate -->
+    <script src="http://localhost/timunity/public/backend/plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="http://localhost/timunity/public/backend/plugins/jquery-validation/additional-methods.min.js"></script>
+    <script>
+        $(document).ajaxStart(function () {
+            showLoader();
+        });
+        $(document).ajaxStop(function () {
+            hideLoader();
+        });
+
+
+        function showLoader() {
+            $("#ajax_loader").show();
+        }
+
+        function hideLoader() {
+            $("#ajax_loader").fadeOut();
+        }
+        setTimeout(function(){
+            $('.alert').slideUp("slow");
+        },10000)
+        $.validator.addMethod("email", function (value, element) {
+            return this.optional(element) || /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/i.test(value);
+        }, "Email Address is invalid: Please enter a valid email address(eg: abc@gmail.com).");
+    </script>
+        <script src="http://localhost/timunity/public/backend\plugins\datatables\jquery.dataTables.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\dataTables.bootstrap4.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\dataTables.buttons.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\buttons.bootstrap4.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\jszip.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\pdfmake.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\vfs_fonts.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\buttons.html5.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\buttons.print.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\buttons.colVis.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\dataTables.responsive.min.js"></script>
+    <script src="http://localhost/timunity/public/backend\plugins\datatables\responsive.bootstrap4.min.js"></script>
+    <script>
+        $("#vouchers").DataTable({
+            "order": [],
+            lengthChange: false,
+            responsive: true,
+            orderCellsTop: true,
+            serverSide: true,
+            scrollCollapse: true,
+            fixedColumns: true,
+            scrollX: true,
+            ajax: 'http://localhost/timunity/public/reseller/dashboard',
+            columns: [
+                {
+                    data: 'ids',
+                    name: 'ids'
+                },
+                {
+                    data: 'action',
+                    name: 'action',
+                    orderable: false,
+                    searchable: false
+                },
+                {
+                    data: 'statuss',
+                    name: 'statuss'
+                },
+                {
+                    data: 'active_status',
+                    name: 'active_status'
+                },
+                {
+                    data: 'product_name',
+                    name: 'product_name'
+                },
+                {
+                    data: 'date',
+                    name: 'date'
+                },
+                {
+                    data: 'quantity',
+                    name: 'quantity'
+                },
+                {
+                    data: 'used_quantity',
+                    name: 'used_quantity'
+                },
+                {
+                    data: 'remaining_quantity',
+                    name: 'remaining_quantity'
+                },
+                {
+                    data: 'unit_price',
+                    name: 'unit_price'
+                },
+                {
+                    data: 'discount',
+                    name: 'discount'
+                },
+                {
+                    data: 'taxes',
+                    name: 'taxes'
+                },
+                {
+                    data: 'total_payable_amount',
+                    name: 'total_payable_amount'
+                },
+                {
+                    data: 'pending_payment',
+                    name: 'pending_payment'
+                }
+            ],
+            "columnDefs": [
+                { "orderable": false, "targets": 0 }
+            ]
+        });
+
+        // On product Change from get more vouchers form
+        $('body').on('change', 'select[name=product_id]', function(){
+            variation_count = $(this).find(':selected').data('variation-count');
+            if(variation_count > 0){
+                url = "http://localhost/timunity/public/get-product-variations/:id";
+                url = url.replace(":id", $(this).val());
+                $.ajax({
+                    url: url,
+                    type: 'GET',
+                    success: function (data) {
+                        if(data['success'] == 'true'){
+                            // console.log(data)
+                            variations = data.data.variations;
+                            $('select[name=variation_id]').find('option').remove().end()
+                            $.each(variations,function(index,value){
+                                $('select[name=variation_id]').append('<option value="'+value.hashedid+'">'+data.data.product_name+' '+value.variation_name+'</option>')
+                            })
+                            $('.variation_selection').show();
+                        }
+                    },
+                    complete:function(data){
+
+                    }
+                })
+            }else{
+                $('.variation_selection').hide();
+            }
+            html = '';
+            length = $('option:selected',this).data('secondary-projects').length;
+            $('option:selected',this).data('secondary-projects').forEach(function(val, ind){
+                html += val;
+                if(ind < length - 1){
+                    html += ', ';
+                }
+            });
+            if(length > 0){
+                $('.secondary_projects_div').show();
+                $('.secondary_projects_div .data').html(html);
+            }else{
+                $('.secondary_projects_div').hide();
+            }
+        });
+        // On changing the country
+        $('body').on('change', '[name=country_id]',function(){
+            vat_percentage = 0;
+            selected_option = $('option:selected',this);
+            if(selected_option.data('is_default_vat') == 1){
+                vat_percentage = selected_option.data('default_vat');
+            }else{
+                vat_percentage =  selected_option.data('vat_vercentage');
+            }
+            $("[name=vat_percentage]").val(vat_percentage)
+            $(".vat_percentage").html(vat_percentage)
+        })
+        // Voucher form validation
+        $('#voucher_form').validate();
+    </script>
+</body>
+</html>
+<script>
+  AOS.init();
+</script>

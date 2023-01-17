@@ -1,0 +1,1303 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+class CurrenciesTableSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        \DB::table('currencies')->delete();
+
+        $currencies = array (
+                          0 => 
+                          array (
+                            'id' => 1,
+                            'currency' => 'Leke',
+                            'code' => 'ALL',
+                            'symbol' => 'Lek',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          1 => 
+                          array (
+                            'id' => 2,
+                            'currency' => 'Dollars',
+                            'code' => 'USD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          2 => 
+                          array (
+                            'id' => 3,
+                            'currency' => 'Afghanis',
+                            'code' => 'AFN',
+                            'symbol' => '؋',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          3 => 
+                          array (
+                            'id' => 4,
+                            'currency' => 'Pesos',
+                            'code' => 'ARS',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          4 => 
+                          array (
+                            'id' => 5,
+                            'currency' => 'Guilders',
+                            'code' => 'AWG',
+                            'symbol' => 'ƒ',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          5 => 
+                          array (
+                            'id' => 6,
+                            'currency' => 'Dollars',
+                            'code' => 'AUD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          6 => 
+                          array (
+                            'id' => 7,
+                            'currency' => 'New Manats',
+                            'code' => 'AZN',
+                            'symbol' => 'ман',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          7 => 
+                          array (
+                            'id' => 8,
+                            'currency' => 'Dollars',
+                            'code' => 'BSD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          8 => 
+                          array (
+                            'id' => 9,
+                            'currency' => 'Dollars',
+                            'code' => 'BBD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          9 => 
+                          array (
+                            'id' => 10,
+                            'currency' => 'Rubles',
+                            'code' => 'BYR',
+                            'symbol' => 'p.',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          10 => 
+                          array (
+                            'id' => 11,
+                            'currency' => 'Euro',
+                            'code' => 'EUR',
+                            'symbol' => '€',
+                            'is_default' => 1,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          11 => 
+                          array (
+                            'id' => 12,
+                            'currency' => 'Dollars',
+                            'code' => 'BZD',
+                            'symbol' => 'BZ$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          12 => 
+                          array (
+                            'id' => 13,
+                            'currency' => 'Dollars',
+                            'code' => 'BMD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          13 => 
+                          array (
+                            'id' => 14,
+                            'currency' => 'Bolivianos',
+                            'code' => 'BOB',
+                            'symbol' => '$b',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          14 => 
+                          array (
+                            'id' => 15,
+                            'currency' => 'Convertible Marka',
+                            'code' => 'BAM',
+                            'symbol' => 'KM',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          15 => 
+                          array (
+                            'id' => 16,
+                            'currency' => 'Pula',
+                            'code' => 'BWP',
+                            'symbol' => 'P',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          16 => 
+                          array (
+                            'id' => 17,
+                            'currency' => 'Leva',
+                            'code' => 'BGN',
+                            'symbol' => 'лв',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          17 => 
+                          array (
+                            'id' => 18,
+                            'currency' => 'Reais',
+                            'code' => 'BRL',
+                            'symbol' => 'R$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          18 => 
+                          array (
+                            'id' => 19,
+                            'currency' => 'Pounds',
+                            'code' => 'GBP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          19 => 
+                          array (
+                            'id' => 20,
+                            'currency' => 'Dollars',
+                            'code' => 'BND',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          20 => 
+                          array (
+                            'id' => 21,
+                            'currency' => 'Riels',
+                            'code' => 'KHR',
+                            'symbol' => '៛',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          21 => 
+                          array (
+                            'id' => 22,
+                            'currency' => 'Dollars',
+                            'code' => 'CAD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          22 => 
+                          array (
+                            'id' => 23,
+                            'currency' => 'Dollars',
+                            'code' => 'KYD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          23 => 
+                          array (
+                            'id' => 24,
+                            'currency' => 'Pesos',
+                            'code' => 'CLP',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          24 => 
+                          array (
+                            'id' => 25,
+                            'currency' => 'Yuan Renminbi',
+                            'code' => 'CNY',
+                            'symbol' => '¥',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          25 => 
+                          array (
+                            'id' => 26,
+                            'currency' => 'Pesos',
+                            'code' => 'COP',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          26 => 
+                          array (
+                            'id' => 27,
+                            'currency' => 'Colón',
+                            'code' => 'CRC',
+                            'symbol' => '₡',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          27 => 
+                          array (
+                            'id' => 28,
+                            'currency' => 'Kuna',
+                            'code' => 'HRK',
+                            'symbol' => 'kn',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          28 => 
+                          array (
+                            'id' => 29,
+                            'currency' => 'Pesos',
+                            'code' => 'CUP',
+                            'symbol' => '₱',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          29 => 
+                          array (
+                            'id' => 30,
+                            'currency' => 'Koruny',
+                            'code' => 'CZK',
+                            'symbol' => 'Kč',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          30 => 
+                          array (
+                            'id' => 31,
+                            'currency' => 'Kroner',
+                            'code' => 'DKK',
+                            'symbol' => 'kr',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          31 => 
+                          array (
+                            'id' => 32,
+                            'currency' => 'Pesos',
+                            'code' => 'DOP',
+                            'symbol' => 'RD$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          32 => 
+                          array (
+                            'id' => 33,
+                            'currency' => 'Dollars',
+                            'code' => 'XCD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          33 => 
+                          array (
+                            'id' => 34,
+                            'currency' => 'Pounds',
+                            'code' => 'EGP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          34 => 
+                          array (
+                            'id' => 35,
+                            'currency' => 'Colones',
+                            'code' => 'SVC',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          35 => 
+                          array (
+                            'id' => 36,
+                            'currency' => 'Pounds',
+                            'code' => 'FKP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          36 => 
+                          array (
+                            'id' => 37,
+                            'currency' => 'Dollars',
+                            'code' => 'FJD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          37 => 
+                          array (
+                            'id' => 38,
+                            'currency' => 'Cedis',
+                            'code' => 'GHC',
+                            'symbol' => '¢',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          38 => 
+                          array (
+                            'id' => 39,
+                            'currency' => 'Pounds',
+                            'code' => 'GIP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          39 => 
+                          array (
+                            'id' => 40,
+                            'currency' => 'Quetzales',
+                            'code' => 'GTQ',
+                            'symbol' => 'Q',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          40 => 
+                          array (
+                            'id' => 41,
+                            'currency' => 'Pounds',
+                            'code' => 'GGP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          41 => 
+                          array (
+                            'id' => 42,
+                            'currency' => 'Dollars',
+                            'code' => 'GYD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          42 => 
+                          array (
+                            'id' => 43,
+                            'currency' => 'Lempiras',
+                            'code' => 'HNL',
+                            'symbol' => 'L',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          43 => 
+                          array (
+                            'id' => 44,
+                            'currency' => 'Dollars',
+                            'code' => 'HKD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          44 => 
+                          array (
+                            'id' => 45,
+                            'currency' => 'Forint',
+                            'code' => 'HUF',
+                            'symbol' => 'Ft',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          45 => 
+                          array (
+                            'id' => 46,
+                            'currency' => 'Kronur',
+                            'code' => 'ISK',
+                            'symbol' => 'kr',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          46 => 
+                          array (
+                            'id' => 47,
+                            'currency' => 'Rupees',
+                            'code' => 'INR',
+                            'symbol' => 'Rp',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          47 => 
+                          array (
+                            'id' => 48,
+                            'currency' => 'Rupiahs',
+                            'code' => 'IDR',
+                            'symbol' => 'Rp',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          48 => 
+                          array (
+                            'id' => 49,
+                            'currency' => 'Rials',
+                            'code' => 'IRR',
+                            'symbol' => '﷼',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          49 => 
+                          array (
+                            'id' => 50,
+                            'currency' => 'Pounds',
+                            'code' => 'IMP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          50 => 
+                          array (
+                            'id' => 51,
+                            'currency' => 'New Shekels',
+                            'code' => 'ILS',
+                            'symbol' => '₪',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          51 => 
+                          array (
+                            'id' => 52,
+                            'currency' => 'Dollars',
+                            'code' => 'JMD',
+                            'symbol' => 'J$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          52 => 
+                          array (
+                            'id' => 53,
+                            'currency' => 'Yen',
+                            'code' => 'JPY',
+                            'symbol' => '¥',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          53 => 
+                          array (
+                            'id' => 54,
+                            'currency' => 'Pounds',
+                            'code' => 'JEP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          54 => 
+                          array (
+                            'id' => 55,
+                            'currency' => 'Tenge',
+                            'code' => 'KZT',
+                            'symbol' => 'лв',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          55 => 
+                          array (
+                            'id' => 56,
+                            'currency' => 'Won',
+                            'code' => 'KPW',
+                            'symbol' => '₩',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          56 => 
+                          array (
+                            'id' => 57,
+                            'currency' => 'Won',
+                            'code' => 'KRW',
+                            'symbol' => '₩',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          57 => 
+                          array (
+                            'id' => 58,
+                            'currency' => 'Soms',
+                            'code' => 'KGS',
+                            'symbol' => 'лв',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          58 => 
+                          array (
+                            'id' => 59,
+                            'currency' => 'Kips',
+                            'code' => 'LAK',
+                            'symbol' => '₭',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          59 => 
+                          array (
+                            'id' => 60,
+                            'currency' => 'Lati',
+                            'code' => 'LVL',
+                            'symbol' => 'Ls',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          60 => 
+                          array (
+                            'id' => 61,
+                            'currency' => 'Pounds',
+                            'code' => 'LBP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          61 => 
+                          array (
+                            'id' => 62,
+                            'currency' => 'Dollars',
+                            'code' => 'LRD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          62 => 
+                          array (
+                            'id' => 63,
+                            'currency' => 'Switzerland Francs',
+                            'code' => 'CHF',
+                            'symbol' => 'CHf',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          63 => 
+                          array (
+                            'id' => 64,
+                            'currency' => 'Litai',
+                            'code' => 'LTL',
+                            'symbol' => 'Lt',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          64 => 
+                          array (
+                            'id' => 65,
+                            'currency' => 'Denars',
+                            'code' => 'MKD',
+                            'symbol' => 'ден',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          65 => 
+                          array (
+                            'id' => 66,
+                            'currency' => 'Ringgits',
+                            'code' => 'MYR',
+                            'symbol' => 'RM',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          66 => 
+                          array (
+                            'id' => 67,
+                            'currency' => 'Rupees',
+                            'code' => 'MUR',
+                            'symbol' => '₨',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          67 => 
+                          array (
+                            'id' => 68,
+                            'currency' => 'Pesos',
+                            'code' => 'MXN',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          68 => 
+                          array (
+                            'id' => 69,
+                            'currency' => 'Tugriks',
+                            'code' => 'MNT',
+                            'symbol' => '₮',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          69 => 
+                          array (
+                            'id' => 70,
+                            'currency' => 'Meticais',
+                            'code' => 'MZN',
+                            'symbol' => 'MT',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          70 => 
+                          array (
+                            'id' => 71,
+                            'currency' => 'Dollars',
+                            'code' => 'NAD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          71 => 
+                          array (
+                            'id' => 72,
+                            'currency' => 'Rupees',
+                            'code' => 'NPR',
+                            'symbol' => '₨',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          72 => 
+                          array (
+                            'id' => 73,
+                            'currency' => 'Guilders',
+                            'code' => 'ANG',
+                            'symbol' => 'ƒ',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          73 => 
+                          array (
+                            'id' => 74,
+                            'currency' => 'Dollars',
+                            'code' => 'NZD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          74 => 
+                          array (
+                            'id' => 75,
+                            'currency' => 'Cordobas',
+                            'code' => 'NIO',
+                            'symbol' => 'C$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          75 => 
+                          array (
+                            'id' => 76,
+                            'currency' => 'Nairas',
+                            'code' => 'NGN',
+                            'symbol' => '₦',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          76 => 
+                          array (
+                            'id' => 77,
+                            'currency' => 'Krone',
+                            'code' => 'NOK',
+                            'symbol' => 'kr',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          77 => 
+                          array (
+                            'id' => 78,
+                            'currency' => 'Rials',
+                            'code' => 'OMR',
+                            'symbol' => '﷼',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          78 => 
+                          array (
+                            'id' => 79,
+                            'currency' => 'Rupees',
+                            'code' => 'PKR',
+                            'symbol' => '₨',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          79 => 
+                          array (
+                            'id' => 80,
+                            'currency' => 'Balboa',
+                            'code' => 'PAB',
+                            'symbol' => 'B/.',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          80 => 
+                          array (
+                            'id' => 81,
+                            'currency' => 'Guarani',
+                            'code' => 'PYG',
+                            'symbol' => 'Gs',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          81 => 
+                          array (
+                            'id' => 82,
+                            'currency' => 'Nuevos Soles',
+                            'code' => 'PEN',
+                            'symbol' => 'S/.',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          82 => 
+                          array (
+                            'id' => 83,
+                            'currency' => 'Pesos',
+                            'code' => 'PHP',
+                            'symbol' => '₱',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          83 => 
+                          array (
+                            'id' => 84,
+                            'currency' => 'Zlotych',
+                            'code' => 'PLN',
+                            'symbol' => 'zł',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          84 => 
+                          array (
+                            'id' => 85,
+                            'currency' => 'Rials',
+                            'code' => 'QAR',
+                            'symbol' => '﷼',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          85 => 
+                          array (
+                            'id' => 86,
+                            'currency' => 'New Lei',
+                            'code' => 'RON',
+                            'symbol' => 'lei',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          86 => 
+                          array (
+                            'id' => 87,
+                            'currency' => 'Rubles',
+                            'code' => 'RUB',
+                            'symbol' => '₽',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          87 => 
+                          array (
+                            'id' => 88,
+                            'currency' => 'Pounds',
+                            'code' => 'SHP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          88 => 
+                          array (
+                            'id' => 89,
+                            'currency' => 'Riyals',
+                            'code' => 'SAR',
+                            'symbol' => '﷼',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          89 => 
+                          array (
+                            'id' => 90,
+                            'currency' => 'Dinars',
+                            'code' => 'RSD',
+                            'symbol' => 'Дин.',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          90 => 
+                          array (
+                            'id' => 91,
+                            'currency' => 'Rupees',
+                            'code' => 'SCR',
+                            'symbol' => '₨',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          91 => 
+                          array (
+                            'id' => 92,
+                            'currency' => 'Dollars',
+                            'code' => 'SGD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          92 => 
+                          array (
+                            'id' => 93,
+                            'currency' => 'Dollars',
+                            'code' => 'SBD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          93 => 
+                          array (
+                            'id' => 94,
+                            'currency' => 'Shillings',
+                            'code' => 'SOS',
+                            'symbol' => 'S',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          94 => 
+                          array (
+                            'id' => 95,
+                            'currency' => 'Rand',
+                            'code' => 'ZAR',
+                            'symbol' => 'R',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          95 => 
+                          array (
+                            'id' => 96,
+                            'currency' => 'Rupees',
+                            'code' => 'LKR',
+                            'symbol' => '₨',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          96 => 
+                          array (
+                            'id' => 97,
+                            'currency' => 'Kronor',
+                            'code' => 'SEK',
+                            'symbol' => 'kr',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          97 => 
+                          array (
+                            'id' => 98,
+                            'currency' => 'Dollars',
+                            'code' => 'SRD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          98 => 
+                          array (
+                            'id' => 99,
+                            'currency' => 'Pounds',
+                            'code' => 'SYP',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          99 => 
+                          array (
+                            'id' => 100,
+                            'currency' => 'New Dollars',
+                            'code' => 'TWD',
+                            'symbol' => 'NT$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          100 => 
+                          array (
+                            'id' => 101,
+                            'currency' => 'Baht',
+                            'code' => 'THB',
+                            'symbol' => '฿',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          101 => 
+                          array (
+                            'id' => 102,
+                            'currency' => 'Dollars',
+                            'code' => 'TTD',
+                            'symbol' => 'TT$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          102 => 
+                          array (
+                            'id' => 103,
+                            'currency' => 'Lira',
+                            'code' => 'TRY',
+                            'symbol' => '₺',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          103 => 
+                          array (
+                            'id' => 104,
+                            'currency' => 'Liras',
+                            'code' => 'TRL',
+                            'symbol' => '£',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          104 => 
+                          array (
+                            'id' => 105,
+                            'currency' => 'Dollars',
+                            'code' => 'TVD',
+                            'symbol' => '$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          105 => 
+                          array (
+                            'id' => 106,
+                            'currency' => 'Hryvnia',
+                            'code' => 'UAH',
+                            'symbol' => '₴',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          106 => 
+                          array (
+                            'id' => 107,
+                            'currency' => 'Pesos',
+                            'code' => 'UYU',
+                            'symbol' => '$U',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          107 => 
+                          array (
+                            'id' => 108,
+                            'currency' => 'Sums',
+                            'code' => 'UZS',
+                            'symbol' => 'лв',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          108 => 
+                          array (
+                            'id' => 109,
+                            'currency' => 'Bolivares Fuertes',
+                            'code' => 'VEF',
+                            'symbol' => 'Bs',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          109 => 
+                          array (
+                            'id' => 110,
+                            'currency' => 'Dong',
+                            'code' => 'VND',
+                            'symbol' => '₫',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          110 => 
+                          array (
+                            'id' => 111,
+                            'currency' => 'Rials',
+                            'code' => 'YER',
+                            'symbol' => '﷼',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          111 => 
+                          array (
+                            'id' => 112,
+                            'currency' => 'Zimbabwe Dollars',
+                            'code' => 'ZWD',
+                            'symbol' => 'Z$',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          112 => 
+                          array (
+                            'id' => 113,
+                            'currency' => 'Rupees',
+                            'code' => 'INR',
+                            'symbol' => '₹',
+                            'is_default' => 0,
+                            'is_active' => 0,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+
+                          113 => 
+                          array (
+                            'id' => 114,
+                            'currency' => 'dirham',
+                            'code' => 'AED',
+                            'symbol' => 'د.إ',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+
+                          114 => 
+                          array (
+                            'id' => 115,
+                            'currency' => 'Australian dollar',
+                            'code' => 'AUD',
+                            'symbol' => 'A$',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+
+                          115 => 
+                          array (
+                            'id' => 116,
+                            'currency' => 'Thai baht',
+                            'code' => 'THB',
+                            'symbol' => '฿',
+                            'is_default' => 0,
+                            'is_active' => 1,
+                            'created_at' => NULL,
+                            'updated_at' => NULL,
+                          ),
+                          
+                        );
+
+        \DB::table('currencies')->insert($currencies);
+    }
+}

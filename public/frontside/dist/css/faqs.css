@@ -1,0 +1,271 @@
+/*------------import font here---------------*/
+
+/* @font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 100;
+  src: url(../../dist/fonts/Metropolis-ExtraLight.woff) format('woff');
+}
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 200;
+  src: url(../../dist/fonts/Metropolis-Light.woff) format('woff');
+}
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 400;
+  src: url(../../dist/fonts/Metropolis-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Metropolis';
+  font-style: normal;
+  font-weight: 500;
+  src: url(../../dist/fonts/Metropolis-Medium.woff) format('woff');
+}
+@font-face {
+  font-family: 'Metropolis';
+  font-style: bold;
+  font-weight: 600;
+  src: url(../../dist/fonts/Metropolis-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Metropolis';
+  font-style: bold;
+  font-weight: 800;
+  src: url(../../dist/fonts/Metropolis-ExtraBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 100;
+  src: url(../../dist/fonts/Metropolis-LightItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 400;
+  src: url(../../dist/fonts/Metropolis-RegularItalic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 600;
+  src: url(../../dist/fonts/Metropolis-BoldItalic.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Metropolis';
+  font-style: italic;
+  font-weight: 800;
+  src: url(../../dist/fonts/Metropolis-ExtraBoldItalic.woff) format('woff');
+} */
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../../dist/fonts/BebasNeue-Light.woff2') format('woff2'),
+      url('../../dist/fonts/BebasNeue-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../../dist/fonts/BebasNeue-Bold.woff2') format('woff2'),
+      url('../../dist/fonts/BebasNeue-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../../dist/fonts/BebasNeue-Regular.woff2') format('woff2'),
+      url('../../dist/fonts/BebasNeue-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('AvenirNext-BoldItalic.woff2') format('woff2'),
+      url('AvenirNext-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('AvenirNext-Bold.woff2') format('woff2'),
+      url('AvenirNext-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('AvenirNext-Italic.woff2') format('woff2'),
+      url('AvenirNext-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next Ultra';
+  src: url('AvenirNext-UltraLight.woff2') format('woff2'),
+      url('AvenirNext-UltraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next';
+  src: url('../../dist/fonts/AvenirNext-Regular.woff2') format('woff2'),
+      url('../../dist/fonts/AvenirNext-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Avenir Next Ultra';
+  src: url('AvenirNext-UltraLightItalic.woff2') format('woff2'),
+      url('AvenirNext-UltraLightItalic.woff') format('woff');
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* headings */
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+  font-family: 'Bebas Neue'!important;
+  font-weight: bold !important;
+}
+li,span,p,a,button,input,textarea,select{
+  font-family: 'Avenir Next'!important;
+  font-weight: normal !important;
+}
+
+.faq-section {
+  background: #9e9e9e14;
+  min-height: auto;
+  padding: 10vh 0 10vh;
+}
+.faq-title h2 {
+    position: relative;
+    margin-bottom: 45px;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1;
+}
+.faq-title h2::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    height: 2px;
+    background: #009a71;
+    bottom: -25px;
+    margin-left: -30px;
+}
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+.accordion .accordion-item button[aria-expanded=true] {
+  border-bottom: 1px solid #009a71;
+}
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-weight: 400;
+  border: none;
+  line-height: 2;
+  background: none;
+  outline: none;
+}
+.accordion button:hover, .accordion button:focus {
+  cursor: pointer;
+  color: #009a71;
+}
+.accordion button:hover::after, .accordion button:focus::after {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 17px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+.accordion button[aria-expanded=true] {
+  color: #009a71;
+}
+.accordion button[aria-expanded=true] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded=true] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 2em 0;
+}
+.accordion-item.loadmore {
+  display:none;
+}
+.btn-container {
+  margin: auto;
+  height:44px;
+  width:166.23px;
+}
